@@ -10,15 +10,12 @@ def randTrials(start, end, k):
     while 1:
         v = random.randint(start, n)
         if v in bdays:
-            bdays[v] = True
-            print "\n" + str(v)
-            print k
+            return k
             break
+
         bdays[v] = True
         k += 1
 
-
-    print bdays.keys()
-
 for i in range(1, 300):
-    randTrials(start, n, k)
+    #bdays = {}
+    print str(i/300.0) + "\t" + str(randTrials(start, n, k))
